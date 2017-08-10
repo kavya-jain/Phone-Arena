@@ -1,0 +1,58 @@
+{
+    "products": [
+                  {
+                    "id": "p001",
+                    "name": "lenovo z2",
+                    "price": "15000",
+                    "quantity": "2",
+					"src": "img/lenovoZ2_1.jpg",
+					"src1":"img/lenovoZ2_2.jpg",
+					"src2":"img/lenovoZ2_3.jpg"
+                  },
+                  {
+                    "id": "p002",
+                    "name": "moto g5",
+                    "price": "25000",
+                    "quantity": "4",
+					"src": "img/motoG5_1.jpg",
+					"src1":"img/motoG5_2.jpg",
+					"src2":"img/motoG5_3.jpg"
+                  },
+                  {
+                    "id": "p003",
+                    "name": "mi note4",
+                    "price": "13000",
+                    "quantity": "5",
+					"src": "img/miNote4_1.jpg",
+					"src1":"img/miNote4_2.jpg",
+					"src2":"img/miNote4_3.jpg"
+                  },
+                  {
+                    "id": "p004",
+                    "name": "one-plus3T",
+                    "price": "30000",
+                    "quantity": "2",
+					"src": "img/oneplus_1.jpg",
+					"src1":"img/oneplus_2.jpg",
+					"src2":"img/oneplus_3.jpg"
+                  },
+                  {
+                    "id": "p005",
+                    "name": "HTC",
+                    "price": "57000",
+                    "quantity": "3",
+					"src": "img/htc_1.jpg",
+					"src1":"img/htc_2.jpg",
+					"src2":"img/htc_3.jpg"
+                  },
+                  {
+                    "id": "p006",
+                    "name": "i phone7",
+                    "price": "70000",
+                    "quantity": "4",
+					"src": "img/iphone_1.jpg",
+					"src1":"img/iphone_2.jpg",
+					"src2":"img/iphone_3.jpg"
+                  }
+                ]
+}
