@@ -30,14 +30,14 @@
   request.send();
 
   request.onreadystatechange = function() {
-   
+
 	//alert("--hi--");
     if( request.readyState == 4) {
       if( request.status >= 200 && request.status ) {
         console.log(request);
         var data = JSON.parse(request.responseText);
         var products = data.products;
-      
+
 		var len1 = fav.length;
 		//alert(len1);
 		var len2 = products.length;
@@ -47,17 +47,17 @@
 		var imag=[];
 		for (i = 0; i < len1; i++) {
 			for(j=0; j < len2; j++){
-			
+
         if (products[j] && products[j].id == fav[i]) {
              name.push(products[j].name);
 			 price.push(products[j].price);
 			 imag.push(products[j].src);
 			// main_img.setAttribute('src', imag);
-			 
-			} 
+
+			}
         }// alert(fav[i]);
     }
-	
+
 	//for(i=0; i<len1; i++){alert("---"+name[i]);}
 	//alert(price);
 	}}
@@ -82,7 +82,7 @@
 		var table = document.getElementById("myTable");
             var rowCount = table.rows.length;
 
-            for(var i=0; i<rowCount; i++) 
+            for(var i=0; i<rowCount; i++)
             {
                 var row = table.rows[i];
                 var chkbox = row.cells[0].childNodes[0];
@@ -95,8 +95,8 @@
             }
 	}
  </script>
- 
- <body style="margin-left:20px">		
+
+ <body style="margin-left:20px">
 		<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -109,7 +109,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="akku.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="cart.html">Cart</a></li>
@@ -119,9 +119,9 @@
   </div>
 </nav>
 
-<section class="main-content">				
+<section class="main-content">
 				<div class="row">
-					<div class="span9">					
+					<div class="span9">
 						<h4 class="title"><span class="text"><strong>Your</strong> Favourities</span></h4>
 						<table class="table table-striped" id="myTable">
 							<thead>
@@ -133,14 +133,14 @@
 								</tr>
 							</thead>
 							<tbody>
-									  
+
 							</tbody>
 						</table>
-						<p class="buttons center">	
+						<p class="buttons center">
 							<button class="btn" type="button" id="upd" onclick=remFav()>Remove</button>
-						</p>							
+						</p>
 					</div>
-					
+
 		<script src="themes/js/common.js"></script>
 		<script>
 			$(document).ready(function() {
@@ -148,6 +148,6 @@
 					document.location.href = "checkout.html";
 				})
 			});
-		</script>		
+		</script>
     </body>
 </html>

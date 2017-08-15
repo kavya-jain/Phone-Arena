@@ -27,16 +27,16 @@ var request = new XMLHttpRequest();
   request.open('GET', 'products.json');
   request.send();
  // var name1, id, price, imag;
-  
+
     request.onreadystatechange = function() {
-   
+
 
     if( request.readyState == 4) {
       if( request.status >= 200 && request.status ) {
         console.log(request);
         var data = JSON.parse(request.responseText);
         var products = data.products;
-      
+
 		var len = products.length;
 		var name = [];
 		for (i = 0; i < len; i++) {
@@ -48,25 +48,25 @@ var request = new XMLHttpRequest();
 			 p2.setAttribute('src', sc2);
 			 p3.setAttribute('src', sc3);
 			 document.getElementById('price').innerHTML = products[i].price;
-			
+
 			/* id=products[i].id;
 			 name1=products[i].name;
 			 price=products[i].price;
 			 imag=products[i].src;*/
-			 
+
         }
     }
 	document.getElementById('name').innerHTML =name;
-       
-	   
+
+
       }
     }
   }
 
-</script>  
+</script>
 	</head>
-	
-    <body>		
+
+    <body>
 		<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -75,11 +75,11 @@ var request = new XMLHttpRequest();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="akku.html">Shopping Cart</a>
+      <a class="navbar-brand" href="index.html">Shopping Cart</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="akku.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="cart.html">Cart</a></li>
@@ -89,8 +89,8 @@ var request = new XMLHttpRequest();
   </div>
 </nav>
 
-		
-		<div id="wrapper" class="container">	
+
+		<div id="wrapper" class="container">
 			<div style="font-family:courier; font-size:160%; text-align:center">
             <p id="name"></p>
 			<br>
@@ -116,9 +116,9 @@ var request = new XMLHttpRequest();
                     <option value="white">White</option>
                     <option value="grey">Grey</option>
             </select>
-			
-                <br> 
-					 
+
+                <br>
+
             <br>
             <p style="font-family:verdana; font-size:70%; text-align:center">
                 <button type="submit" id="btn_fav" name="add to favourites" onclick="addToFav()" style="width: 100px; height: 50px">Add to Favourities</button>
@@ -134,16 +134,16 @@ var request = new XMLHttpRequest();
 			   <tr class=""><td width="50%">Form factor</td><td width="50%">Touchscreen</td></tr>
 			   <tr class="">
 			   <td width="50%">Dimensions (mm)</td>
-			   <td width="50%"><span itemprop="height">141.65 </span> x 
-			   <span temprop="width"> 68.88 </span> x <span itemprop="depth"> 8.45</span></td></tr><tr class=""><td 
-				width="50%">Weight (g)</td><td width="50%">149.00</td></tr><tr class=""><td width="50%">Battery capacity 
-				(mAh)</td><td width="50%">3500</td></tr><tr class=""><td width="50%">Removable battery</td><td 
-				width="50%">No</td></tr><tr class=""><td width="50%">Colours</td><td width="50%">White, Black</td></tr><tr 
+			   <td width="50%"><span itemprop="height">141.65 </span> x
+			   <span temprop="width"> 68.88 </span> x <span itemprop="depth"> 8.45</span></td></tr><tr class=""><td
+				width="50%">Weight (g)</td><td width="50%">149.00</td></tr><tr class=""><td width="50%">Battery capacity
+				(mAh)</td><td width="50%">3500</td></tr><tr class=""><td width="50%">Removable battery</td><td
+				width="50%">No</td></tr><tr class=""><td width="50%">Colours</td><td width="50%">White, Black</td></tr><tr
 				class=""><td width="50%">SAR value</td><td width="50%">0.71</td></tr></tbody></table>
             </div><br>
-			
+
 			<div style="font-family:verdana; font-size:70%; text-align:left">
-             <b><ins>DISPLAY</ins></b><br><br>  
+             <b><ins>DISPLAY</ins></b><br><br>
 			   <table width="100%" cellspacing="0" cellpadding="0" style="border: none;"><tbody>
 			   <tr class="firstrow"><td width="50%">Screen size (inches)</td>
 			   <td width="50%">5.00</td></tr>
@@ -155,7 +155,7 @@ var request = new XMLHttpRequest();
 			   <td width="50%">441</td></tr></tbody>
 			</table></div><br>
 			<div style="font-family:verdana; font-size:70%; text-align:left">
-				<b><ins>CAMERA</ins></b><br><br>  
+				<b><ins>CAMERA</ins></b><br><br>
 				<table width="100%" cellspacing="0" cellpadding="0" style="border: none;"><tbody><tr class="firstrow"><td width="50%">Rear camera</td><td width="50%">13-megapixel</td></tr><tr class=""><td width="50%">Flash</td><td width="50%">Yes</td></tr><tr class=""><td width="50%">Front camera</td><td width="50%">8-megapixel</td></tr></tbody></table>
         </div>
 		<script src="themes/js/common.js"></script>
@@ -172,18 +172,18 @@ var request = new XMLHttpRequest();
 					openEffect  : 'none',
 					closeEffect : 'none'
 				});
-				
+
 				$('#myCarousel-2').carousel({
                     interval: 2500
-                });								
+                });
 			});
-			
+
 			function hover(a)
             {
-              
-       	    main_img.setAttribute('src', ""); 
+
+       	    main_img.setAttribute('src', "");
 		var img=document.getElementById("main_img");
-		
+
                 if(a==1)
                 {
                     main_img.setAttribute('src', sc1);
@@ -195,7 +195,7 @@ var request = new XMLHttpRequest();
                 else if(a==3)
                     main_img.setAttribute('src', sc3);
             }
-			
+
 			function addToFav()
 			{
 				//alert(phone);
@@ -207,14 +207,14 @@ var request = new XMLHttpRequest();
 				sessionStorage.setItem("AddedFav",JSON.stringify(AddedFav));
 				//alert(AddedFavs);
 			}
-			
+
 			function addToCart()
 			{
 				var AddedCart=[];
 				AddedCart=JSON.parse(sessionStorage.getItem("AddedCart"));
 				AddedCart.push(phone);
 				sessionStorage.setItem("AddedCart",JSON.stringify(AddedCart));
-			}			
+			}
 		</script>
 		<footer class="container-fluid text-center">
   <p>Footer Text</p>

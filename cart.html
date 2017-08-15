@@ -31,14 +31,14 @@
   request.send();
 
   request.onreadystatechange = function() {
-   
+
 	//alert("--hi--");
     if( request.readyState == 4) {
       if( request.status >= 200 && request.status ) {
         console.log(request);
         var data = JSON.parse(request.responseText);
         var products = data.products;
-      
+
 		var len1 = cart.length;
 		//alert(len1);
 		var len2 = products.length;
@@ -48,21 +48,21 @@
 		var imag=[];
 		for (i = 0; i < len1; i++) {
 			for(j=0; j < len2; j++){
-			
+
         if (products[j] && products[j].id == cart[i]) {
              name.push(products[j].name);
 			 price.push(products[j].price);
 			 imag.push(products[j].src);
 			// main_img.setAttribute('src', imag);
-			 
-			} 
+
+			}
         }// alert(fav[i]);
     }
-	
+
 	//for(i=0; i<len1; i++){alert("---"+name[i]);}
 	//alert(price);
 	}}
-	
+
 	var table = document.getElementById("myTable");
 	for(i = 0; i < len1; i++)
 	{
@@ -77,7 +77,7 @@
 		cell2.innerHTML = "<img src=\""+imag[i]+"\" style=\"width:30px; height:30px\"/>";
 		cell3.innerHTML = name[i];
 		cell4.innerHTML = price[i];
-		cell5.innerHTML = "&nbsp";	
+		cell5.innerHTML = "&nbsp";
 		sum+=parseInt(price[i]);
 	}
 	 document.getElementById('total').innerHTML=sum;
@@ -98,11 +98,11 @@
 				//box.parentNode.removeChild(document.getElementById(i));
 			}
 		}*/
-		
+
             var table = document.getElementById("myTable");
             var rowCount = table.rows.length;
 
-            for(var i=0; i<rowCount; i++) 
+            for(var i=0; i<rowCount; i++)
             {
                 var row = table.rows[i];
                 var chkbox = row.cells[0].childNodes[0];
@@ -120,11 +120,11 @@
 				//alert(row.cells[3].innerHTML);
 				sum+=parseInt(row.cells[3].innerHTML);
 			}
-       
+
 	}
  </script>
- 
- <body style="margin-left:20px">		
+
+ <body style="margin-left:20px">
 		<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -133,11 +133,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="akku.html">Shopping Cart</a>
+      <a class="navbar-brand" href="index.html">Shopping Cart</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="akku.html">Home</a></li>
+        <li class="active"><a href="index.html">Home</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Cart</a></li>
@@ -147,9 +147,9 @@
   </div>
 </nav>
 
-<section class="main-content">				
+<section class="main-content">
 				<div class="row">
-					<div class="span9">					
+					<div class="span9">
 						<h4 class="title"><span class="text"><strong>Your</strong> Cart</span></h4>
 						<table class="table table-striped" id="myTable">
 							<thead>
@@ -158,20 +158,20 @@
 									<th>Image</th>
 									<th>Product Name</th>
 									<th>Unit Price</th>
-									
+
 								</tr>
 							</thead>
 							<tbody>
-									  
+
 							</tbody>
 						</table>
 						<h3 style="text-align:right;margin-right:50px">Total:<div id="total"></div></h3><br><br>
-						<p class="buttons center">	
+						<p class="buttons center">
 							<button class="btn" type="button" id="upd" onclick=remCart()>Remove</button>
 							<button class="btn" type="button" id="chkout" onclick="alert('amount to pay='+sum)">Checkout</button>
-						</p>					
+						</p>
 					</div>
-					
+
 		<script src="themes/js/common.js"></script>
 		<script>
 			$(document).ready(function() {
@@ -179,6 +179,6 @@
 					document.location.href = "checkout.html";
 				})
 			});
-		</script>		
+		</script>
     </body>
 </html>
