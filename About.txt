@@ -1,0 +1,3 @@
+Ma'am
+
+Please run the website in firefox only. Since we have used json as the db, the requests sent to json are cross origin. This requires a server or is supported by firefox.
